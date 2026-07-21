@@ -25,6 +25,7 @@
 
       environment.systemPackages = [
         pkgs.wezterm
+        pkgs.tldr
       ];
 
       nixpkgs.hostPlatform = "aarch64-darwin";
