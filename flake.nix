@@ -29,6 +29,7 @@
         pkgs.mutt
         pkgs.tmux
         pkgs.neovim
+        pkgs.gh
       ];
 
       nixpkgs.hostPlatform = "aarch64-darwin";
