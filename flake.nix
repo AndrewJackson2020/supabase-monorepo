@@ -30,6 +30,7 @@
         pkgs.tmux
         pkgs.neovim
         pkgs.gh
+        pkgs.podman
       ];
 
       nixpkgs.hostPlatform = "aarch64-darwin";
