@@ -28,6 +28,7 @@
       environment.systemPackages = [
         pkgs.wezterm
         pkgs.tldr
+        pkgs.pass
         pkgs.mutt
         pkgs.tmux
         pkgs.neovim
