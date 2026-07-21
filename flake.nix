@@ -26,6 +26,8 @@
       environment.systemPackages = [
         pkgs.wezterm
         pkgs.tldr
+        pkgs.mutt
+        pkgs.tmux
       ];
 
       nixpkgs.hostPlatform = "aarch64-darwin";
