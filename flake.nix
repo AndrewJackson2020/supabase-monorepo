@@ -29,6 +29,7 @@
         pkgs.wezterm
         pkgs.tldr
         pkgs.pass
+        pkgs.gnupg
         pkgs.mutt
         pkgs.tmux
         pkgs.neovim
