@@ -8,6 +8,7 @@
   home.file = {
     ".zshrc".source = ./home/.zshrc;
     ".wezterm.lua".source = ./home/.wezterm.lua;
+    "Pictures/wezterm_background.jpg".source = ./home/Pictures/wezterm_background.jpg;
 
   };
   home.username = "aj";
