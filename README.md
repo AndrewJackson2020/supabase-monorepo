@@ -1,5 +1,5 @@
 
 rebuild darwin
 ```zsh
-darwin-rebuild build --flake .#Andrews-MacBook-Pro
+sudo darwin-rebuild switch --flake .#Andrews-MacBook-Pro
 ```

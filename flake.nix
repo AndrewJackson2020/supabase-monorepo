@@ -14,6 +14,10 @@
       nix.settings.experimental-features = "nix-command flakes";
 
       programs.zsh.enable = true;
+      users.users.aj.shell = pkgs.zsh;
+      users.knownUsers = [ "aj" ];
+      users.users.aj.uid = 501;
+
 
       system.configurationRevision = self.rev or self.dirtyRev or null;
 
