@@ -7,6 +7,7 @@
 
   home.file = {
     ".zshrc".source = ./home/.zshrc;
+    ".wezterm.lua".source = ./home/.wezterm.lua;
 
   };
   home.username = "aj";
