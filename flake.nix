@@ -35,6 +35,9 @@
         pkgs.neovim
         pkgs.gh
         pkgs.podman
+        pkgs.fzf
+        pkgs.ripgrep
+        pkgs.tree
       ];
 
       nixpkgs.hostPlatform = "aarch64-darwin";
