@@ -13,6 +13,7 @@
     ".config/nvim/lua/config/lazy.lua".source = ./home/.config/nvim/lua/config/lazy.lua;
     ".config/nvim/lua/plugins/telescope.lua".source = ./home/.config/nvim/lua/plugins/telescope.lua;
     ".config/nvim/lua/plugins/tokyonight.lua".source = ./home/.config/nvim/lua/plugins/tokyonight.lua;
+    ".config/nvim/lua/plugins/mason.lua".source = ./home/.config/nvim/lua/plugins/mason.lua;
 
   };
   home.username = "aj";
