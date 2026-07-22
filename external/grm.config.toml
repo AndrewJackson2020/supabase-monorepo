@@ -1,0 +1,19 @@
+[[trees]]
+root = "./repos"
+
+  [[trees.repos]]
+  name = "public/pgbouncer"
+
+    [[trees.repos.remotes]]
+    name = "github"
+    url = "https://github.com/pgbouncer/pgbouncer.git"
+    type = "https"
+
+
+  [[trees.repos]]
+  name = "supabase/vault"
+
+    [[trees.repos.remotes]]
+    name = "origin"
+    url = "https://github.com/supabase/vault.git"
+    type = "https"
