@@ -18,6 +18,14 @@ root = "./repos"
     type = "https"
 
   [[trees.repos]]
+  name = "public/pg_partman"
+
+    [[trees.repos.remotes]]
+    name = "origin"
+    url = "https://github.com/pgpartman/pg_partman.git"
+    type = "https"
+
+  [[trees.repos]]
   name = "supabase/vault"
 
     [[trees.repos.remotes]]
@@ -47,4 +55,12 @@ root = "./repos"
     [[trees.repos.remotes]]
     name = "origin"
     url = "https://github.com/supabase/wrappers.git"
+    type = "https"
+
+  [[trees.repos]]
+  name = "supabase/postgres"
+
+    [[trees.repos.remotes]]
+    name = "origin"
+    url = "https://github.com/supabase/postgres.git"
     type = "https"
