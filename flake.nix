@@ -7,9 +7,14 @@
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager/release-26.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    git-repo-manager = {
+      url = "github:hakoerber/git-repo-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+    };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager}:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, git-repo-manager}:
   let
     configuration = { pkgs, ... }: {
 
@@ -38,6 +43,7 @@
         pkgs.fzf
         pkgs.ripgrep
         pkgs.tree
+        git-repo-manager.packages.aarch64-darwin.git-repo-manager
       ];
 
       nixpkgs.hostPlatform = "aarch64-darwin";
