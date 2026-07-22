@@ -1,4 +1,7 @@
 export PATH="${HOME}/.local/bin:${PATH}"
-export EDITOR=vim
+export EDITOR=nvim
+
+alias vi=nvim
+alias vim=nvim
 
 source <(fzf --zsh)
