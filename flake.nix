@@ -42,6 +42,7 @@
         pkgs.podman
         pkgs.fzf
         pkgs.ripgrep
+        pkgs.wget
         pkgs.tree
         git-repo-manager.packages.aarch64-darwin.git-repo-manager
       ];
