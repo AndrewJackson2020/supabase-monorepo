@@ -2,13 +2,20 @@
 root = "./repos"
 
   [[trees.repos]]
+  name = "public/postgres"
+
+    [[trees.repos.remotes]]
+    name = "origin"
+    url = "https://github.com/postgres/postgres.git"
+    type = "https"
+
+  [[trees.repos]]
   name = "public/pgbouncer"
 
     [[trees.repos.remotes]]
-    name = "github"
+    name = "origin"
     url = "https://github.com/pgbouncer/pgbouncer.git"
     type = "https"
-
 
   [[trees.repos]]
   name = "supabase/vault"
@@ -24,6 +31,14 @@ root = "./repos"
     [[trees.repos.remotes]]
     name = "origin"
     url = "https://github.com/supabase/pg_net.git"
+    type = "https"
+
+  [[trees.repos]]
+  name = "supabase/supabase"
+
+    [[trees.repos.remotes]]
+    name = "origin"
+    url = "https://github.com/supabase/supabase.git"
     type = "https"
 
   [[trees.repos]]
