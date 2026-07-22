@@ -17,3 +17,19 @@ root = "./repos"
     name = "origin"
     url = "https://github.com/supabase/vault.git"
     type = "https"
+
+  [[trees.repos]]
+  name = "supabase/pg_net"
+
+    [[trees.repos.remotes]]
+    name = "origin"
+    url = "https://github.com/supabase/pg_net.git"
+    type = "https"
+
+  [[trees.repos]]
+  name = "supabase/wrappers"
+
+    [[trees.repos.remotes]]
+    name = "origin"
+    url = "https://github.com/supabase/wrappers.git"
+    type = "https"
