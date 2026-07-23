@@ -3,6 +3,7 @@ root = "./repos"
 
   [[trees.repos]]
   name = "public/postgres"
+  worktree_setup = true
 
     [[trees.repos.remotes]]
     name = "origin"
@@ -11,6 +12,7 @@ root = "./repos"
 
   [[trees.repos]]
   name = "public/pgbouncer"
+  worktree_setup = true
 
     [[trees.repos.remotes]]
     name = "origin"
@@ -19,6 +21,7 @@ root = "./repos"
 
   [[trees.repos]]
   name = "public/pg_partman"
+  worktree_setup = true
 
     [[trees.repos.remotes]]
     name = "origin"
@@ -27,6 +30,7 @@ root = "./repos"
 
   [[trees.repos]]
   name = "supabase/vault"
+  worktree_setup = true
 
     [[trees.repos.remotes]]
     name = "origin"
@@ -35,6 +39,7 @@ root = "./repos"
 
   [[trees.repos]]
   name = "supabase/pg_net"
+  worktree_setup = true
 
     [[trees.repos.remotes]]
     name = "origin"
@@ -43,6 +48,7 @@ root = "./repos"
 
   [[trees.repos]]
   name = "supabase/supabase"
+  worktree_setup = true
 
     [[trees.repos.remotes]]
     name = "origin"
@@ -51,6 +57,7 @@ root = "./repos"
 
   [[trees.repos]]
   name = "supabase/wrappers"
+  worktree_setup = true
 
     [[trees.repos.remotes]]
     name = "origin"
@@ -59,6 +66,7 @@ root = "./repos"
 
   [[trees.repos]]
   name = "supabase/postgres"
+  worktree_setup = true
 
     [[trees.repos.remotes]]
     name = "origin"
