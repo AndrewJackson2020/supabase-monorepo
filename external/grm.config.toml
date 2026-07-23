@@ -1,6 +1,7 @@
 [[trees]]
 root = "./repos"
 
+  # Public repos
   [[trees.repos]]
   name = "public/postgres"
   worktree_setup = true
@@ -28,6 +29,7 @@ root = "./repos"
     url = "https://github.com/pgpartman/pg_partman.git"
     type = "https"
 
+  # Supabase repos
   [[trees.repos]]
   name = "supabase/vault"
   worktree_setup = true
@@ -71,4 +73,40 @@ root = "./repos"
     [[trees.repos.remotes]]
     name = "origin"
     url = "https://github.com/supabase/postgres.git"
+    type = "https"
+
+  [[trees.repos]]
+  name = "supabase/supautils"
+  worktree_setup = true
+
+    [[trees.repos.remotes]]
+    name = "origin"
+    url = "https://github.com/supabase/supautils.git"
+    type = "https"
+
+  [[trees.repos]]
+  name = "supabase/pg_jsonschema"
+  worktree_setup = true
+
+    [[trees.repos.remotes]]
+    name = "origin"
+    url = "https://github.com/supabase/pg_jsonschema.git"
+    type = "https"
+
+  [[trees.repos]]
+  name = "supabase/pg_graphql"
+  worktree_setup = true
+
+    [[trees.repos.remotes]]
+    name = "origin"
+    url = "https://github.com/supabase/pg_graphql.git"
+    type = "https"
+
+  [[trees.repos]]
+  name = "supabase/index_advisor"
+  worktree_setup = true
+
+    [[trees.repos.remotes]]
+    name = "origin"
+    url = "https://github.com/olirice/index_advisor.git"
     type = "https"
