@@ -1,0 +1,16 @@
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ="America/Chicago"
+
+RUN apt-get update
+RUN apt-get -y --no-install-recommends install gnupg postgresql-common
+RUN /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y
+RUN apt-get update
+RUN apt-get -y --no-install-recommends install ca-certificates cpio git postgresql-18 python3 python3-pip python3-venv krb5-kdc krb5-admin-server krb5-user libkrb5-dev sudo neovim
+COPY ./setup_system_krb.sh /root/setup_system_krb.sh
+RUN chmod +x /root/setup_system_krb.sh
+
+COPY ./entrypoint.sh /root/entrypoint.sh
+RUN chmod +x /root/entrypoint.sh
+CMD /root/entrypoint.sh
