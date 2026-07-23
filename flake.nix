@@ -10,12 +10,12 @@
     git-repo-manager = {
       url = "github:hakoerber/git-repo-manager";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
     };
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, git-repo-manager}:
   let
+    pkgs = nixpkgs.legacyPackages.aarch64-darwin;
     configuration = { pkgs, ... }: {
 
       nix.settings.experimental-features = "nix-command flakes";
@@ -51,6 +51,7 @@
     };
   in
   {
+    packages."aarch64-darwin".pgbouncer = (import ./external/repos/public/pgbouncer/default.nix {inherit pkgs; build = "master"; build_type = "autoconf";}).package;
     darwinConfigurations."Andrews-MacBook-Pro" = nix-darwin.lib.darwinSystem {
       modules = [ 
 	configuration 
