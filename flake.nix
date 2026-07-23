@@ -44,6 +44,7 @@
         pkgs.ripgrep
         pkgs.wget
         pkgs.tree
+        pkgs.krb5
         git-repo-manager.packages.aarch64-darwin.git-repo-manager
       ];
 
