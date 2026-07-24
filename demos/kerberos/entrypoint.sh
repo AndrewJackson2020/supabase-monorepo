@@ -29,13 +29,39 @@ chmod 644 /tmp/postgres.keytab
 
 # Create data directory and run postgres as postgres user
 sudo -u postgres bash << 'EOF'
+	# Start postgres instance 1
 	DATA_DIR=$(mktemp -d)
 	PG_BIN='/usr/lib/postgresql/18/bin'
+
 	"${PG_BIN}/initdb" -D "${DATA_DIR}"
 
 	echo 'host  	all  		all  		0.0.0.0/0  		gss  include_realm=0  krb_realm=EXAMPLE.COM' >> "${DATA_DIR}/pg_hba.conf"
 
-	echo "krb_server_keyfile = 'FILE:/tmp/postgres.keytab'" >> "${DATA_DIR}/postgresql.conf"
-	echo "listen_addresses = '*'" >> "${DATA_DIR}/postgresql.conf"
-	"${PG_BIN}/postgres" -D "${DATA_DIR}"
+	echo "
+	krb_server_keyfile = 'FILE:/tmp/postgres.keytab'
+	listen_addresses = '*'
+	port = 5432
+	gss_accept_delegation = on
+	" >> "${DATA_DIR}/postgresql.conf"
+
+	"${PG_BIN}/pg_ctl" -D "${DATA_DIR}" start -l "${DATA_DIR}/logfile"
+
+	# Start postgres instance 2
+	DATA_DIR=$(mktemp -d)
+	PG_BIN='/usr/lib/postgresql/18/bin'
+
+	"${PG_BIN}/initdb" -D "${DATA_DIR}"
+
+	echo 'host  	all  		all  		0.0.0.0/0  		gss  include_realm=0  krb_realm=EXAMPLE.COM' >> "${DATA_DIR}/pg_hba.conf"
+
+	echo "
+	krb_server_keyfile = 'FILE:/tmp/postgres.keytab'
+	listen_addresses = '*'
+	port = 5433
+	gss_accept_delegation = on
+	" >> "${DATA_DIR}/postgresql.conf"
+
+	"${PG_BIN}/pg_ctl" -D "${DATA_DIR}" start -l "${DATA_DIR}/logfile"
+
+	tail -f /etc/hostname
 EOF
