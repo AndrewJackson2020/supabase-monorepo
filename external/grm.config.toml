@@ -30,6 +30,7 @@ root = "./repos"
     type = "https"
 
   # Supabase repos
+  # TODO May need to move to ~/supabase per security docs
   [[trees.repos]]
   name = "supabase/vault"
   worktree_setup = true
